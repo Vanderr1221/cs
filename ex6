@@ -1,0 +1,24 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Примеры использования
+        Console.WriteLine(IsPalindrome("радар"));   // true
+        Console.WriteLine(IsPalindrome("hello"));   // false
+        Console.WriteLine(IsPalindrome("А роза упала на лапу Азора")); // true
+    }
+
+    static bool IsPalindrome(string input)
+    {
+        string cleanedInput = input.Replace(" ", "").ToLower();
+        
+        for(int i = 0; i < cleanedInput.Length / 2; i++)
+        {
+            if(cleanedInput[i] != cleanedInput[cleanedInput.Length - 1 - i])
+                return false;
+        }
+        return true;
+    }
+}
