@@ -10,11 +10,11 @@ class Program
         Console.Write("Введите количество месяцев: ");
         int months = Convert.ToInt32(Console.ReadLine());
 
-        int currentMonth = 0; // Счётчик месяцев
+        int currentMonth = 0;
         while (currentMonth < months)
         {
             deposit += deposit * 0.07m;
-            currentMonth++; // Увеличиваем счётчик после начисления процентов
+            currentMonth++;
         }
 
         Console.WriteLine($"Итоговая сумма вклада: {deposit:F2}");
