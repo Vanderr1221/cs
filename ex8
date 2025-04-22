@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        // Пример использования
+        List<int> numbers = new List<int> { 3, 7, 2, 9, 5 };
+        int max = FindMax(numbers);
+        Console.WriteLine($"Максимальный элемент: {max}");
+    }
+
+    static int FindMax(List<int> numbers)
+    {
+        if(numbers == null || numbers.Count == 0)
+            throw new ArgumentException("Список не может быть пустым");
+        
+        int max = numbers[0];
+        foreach(int num in numbers)
+        {
+            if(num > max) max = num;
+        }
+        return max;
+    }
+}
