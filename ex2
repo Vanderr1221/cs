@@ -1,0 +1,22 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите сумму вклада: ");
+        decimal deposit = Convert.ToDecimal(Console.ReadLine());
+        
+        Console.Write("Введите количество месяцев: ");
+        int months = Convert.ToInt32(Console.ReadLine());
+
+        int currentMonth = 0; // Счётчик месяцев
+        while (currentMonth < months)
+        {
+            deposit += deposit * 0.07m;
+            currentMonth++; // Увеличиваем счётчик после начисления процентов
+        }
+
+        Console.WriteLine($"Итоговая сумма вклада: {deposit:F2}");
+    }
+}
