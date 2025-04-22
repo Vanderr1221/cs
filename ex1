@@ -12,7 +12,7 @@ class Program
 
         for (int i = 0; i < months; i++)
         {
-            deposit += deposit * 0.07m; // Добавляем 7% каждый месяц
+            deposit += deposit * 0.07m;
         }
 
         Console.WriteLine($"Итоговая сумма вклада: {deposit:F2}");
